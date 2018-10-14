@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var numericalGrade = prompt("Enter numerical grade:");
+
+    if (numericalGrade < 0 || numericalGrade > 100) {
+        alert("Please enter a number between 0 and 100");
+    } else { 
+        alert("Letter grade: " + letterGrade);
+    }
+
+    if (numericalGrade >= 88) {
+				letterGrade = "A";
+			} else if (numericalGrade >= 80) {
+				letterGrade = "B";
+			} else if (numericalGrade >= 68) {
+				letterGrade = "C";
+			} else if (numericalGrade >= 60) {
+				letterGrade = "D";
+			} else { // don't need a test
+				letterGrade = "F";
+			} 
+    </script>
+</body>
+</html>
