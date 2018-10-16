@@ -29,20 +29,20 @@
         var par = 72;
         var str = "";
         if (sum == par) {
-            var str = "That's pretty good. You are at par.";
+            var str = "That's pretty good. You have par.";
         } else if (sum < par) {
             var away = par - sum;
             if (away == 1) {
-                var str = "You are " + away + " point under par. That's OK I guess.";
+                var str = "You are " + away + " stroke under par. That's OK I guess.";
             } else {
-                var str = "Great jeorb! You are " + away + " points under par.";
+                var str = "Great jeorb! You are " + away + " strokes under par.";
             }
         } else {
             var away = sum - par;
             if (away == 1) {
-                var str = "Wow... You are " + away + " point over par. That's mildly disappointing.";
+                var str = "Wow... You are " + away + " stroke over par. That's mildly disappointing.";
             } else {
-                var str = "Wow... You are " + away + " points over par. That's disappointing.";
+                var str = "Wow... You are " + away + " strokes over par. That's disappointing.";
             }
         }
 
