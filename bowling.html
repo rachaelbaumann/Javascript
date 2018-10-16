@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bowling Thing</title>
+    <link rel="stylesheet" 
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+          crossorigin="anonymous">
+    <link href = "bowling.css" type = "text/css" rel = "stylesheet">
+
+    <script>
+        function fillArrayAndSumAndAvg() { // onclick event
+            var frames = getRefById("frames"); //search element and get id frames
+            var sum = getRefById("sum");
+            var avg = getRefById("avg");
+
+            var scores = []; // build the frames array with 10 random numbers between 0 and 10
+            for (var i = 0; i < 10; i++) {
+                scores.push(Math.floor(Math.random() * 11)); //push appends a new element to the end of an array
+                // scores.push(getRandomNumber());
+            }
+            console.log(scores);
+        }
+
+        // function getRandomNumber() {
+        //     return Math.floor(Math.random() * 11);
+        // }
+        
+        function getRefById(id) {
+            return document.getElementById(id); //could also just put this in fillArrayAndSumAndAvg
+        }
+    </script>
+
+</head>
+<body>
+    <h2>Bowling Demo App</h2>
+    <h3>Frames</h3>
+    <p id = "frames"> <!--We're going to reference this id from javascript so we can put things in <p>-->
+        The frames array goes here
+    </p>
+    <!-- could also put these inputs in a <label> -->
+    <p>Sum: <input type = "text" id = "sum"></p> <!--need an id for js-->
+    <p>Average: <input type = "text" id = "avg"></p>
+    <button onclick = "fillArrayAndSumAndAvg()">Bowl!</button>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bowling Thing</title>
+    <link rel="stylesheet" 
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+          crossorigin="anonymous">
+    <link href = "bowling.css" type = "text/css" rel = "stylesheet">
+</head>
+<body>
+    <form method = "POST">
+        <button type = "Submit">Get scores</button>
+        <br/>
+        Sum: <input type="text" name="sum">
+        <br>
+        Average: <input type="text" name="average">
+    </form>
+
+    <script>
+    var scores = [];
+    for (var i = 0; i < 11; i++) {
+        scores.push(Math.floor(Math.random() * 11));
+      }
+
+    sum = scores.reduce(add, 0);
+    function add(a, b) {
+        return a + b;
+    }
+    </script>
+
+    <script>document.write(scores);</script>
+
+
+    <script>document.write(sum);</script>
+    
+<a href = bowling.html><span id="scores"></span></a>
+<br/>
+<a href = bowling.html><span id="test"></span></a>
+<br/>
+getScores(); -->
+
+<!-- </body> -->
+
+<!-- <script src = "bowling.js"></script> -->
+
+<!-- </html> --> 
