@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Stupid Golf Demo</title>
+    <link rel="stylesheet" 
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+          crossorigin="anonymous">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href = "golf.css" type = "text/css" rel = "stylesheet">
+
+    <script>
+        function arraySumAvg() {
+        // var scoreCtrl = document.getElementById("score");
+        // var sumCtrl = document.getElementById("sum");
+        // var avgCtrl = document.getElementById("avg");
+
+        var scores = [];
+        var sum = 0;
+        for (var i = 1; i < 19; i++) {
+            let sc = Math.ceil(Math.random() * 7);
+            scores.push(sc);
+            sum += sc;
+        }
+
+        var avg = sum / scores.length;
+
+        var par = 72;
+        var str = "";
+        if (sum == par) {
+            var str = "That's pretty good. You are at par.";
+        } else if (sum < par) {
+            var away = par - sum;
+            if (away == 1) {
+                var str = "You are " + away + " point under par. That's OK I guess.";
+            } else {
+                var str = "Great jeorb! You are " + away + " points under par.";
+            }
+        } else {
+            var away = sum - par;
+            if (away == 1) {
+                var str = "Wow... You are " + away + " point over par. That's mildly disappointing.";
+            } else {
+                var str = "Wow... You are " + away + " points over par. That's disappointing.";
+            }
+        }
+
+        // scoreCtrl.textContent = "scores: " + scores.join(" - ");
+        // sumCtrl.value = sum;
+        // avgCtrl.value = avg;
+
+        $("#score").text("scores: " + scores.join(" - "));
+        $("#sum").text("Total score: " + sum);
+        $("#avg").text("Average score: " + avg.toFixed(2));
+        $("#par").text(str);
+    }
+    </script>
+</head>
+<body>
+    <h2>Welcome To This Golf Thing...</h2>
+    <h5 id = "score">Golf Scores</h5>
+    <p id = "sum">Total</p>
+    <p id = "avg">Average</p>
+    <h5 id = "par">Par</h5>
+    <button onclick = "arraySumAvg()">Play some golf!</button>
+</body>
+</html>
