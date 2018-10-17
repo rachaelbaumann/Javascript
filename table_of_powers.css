@@ -1,0 +1,14 @@
+body {
+    background: pink;
+    margin: 20px;
+}
+p {
+    font-size: 1.2em;
+}
+th, tbody {
+    padding: 10px;
+    text-align: center;
+}
+table, thead {
+    border: 1px solid black;
+}

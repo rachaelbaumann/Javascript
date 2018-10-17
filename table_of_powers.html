@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Table of Powers</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jQuery-->
+    <link rel="stylesheet" 
+         href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+        crossorigin="anonymous">
+    <link href = "table_of_powers.css" type = "text/css" rel = "stylesheet">
+    <script>
+        function doPowersThing() {
+            console.log("test");
+            let nbr = $("#userInt").val();
+        
+            let tableBody = "";
+            $("#powRows").empty();
+            for (var i = 1; i <= nbr; i++) {
+                let squared = i * i;
+                let cubed = i * i * i;
+                let pow = "<tr><td>" + i + "</td><td>" + squared + "</td><td>" + cubed + "</td></tr>";
+                tableBody += pow;
+            }
+            $("#powRows").append(tableBody);
+        }
+    </script>
+</head>
+<body>
+    <h2>Table of Powers!!!</h2>
+    <div style = "font-size: 1.2em;">
+       <label for = "userInt">Enter an integer:</label>
+       <input type = "text" id = "userInt" name = "userInt">
+    </div>
+    <div>
+        <button type = "submit" onclick = "doPowersThing()">Okily Dokily!</button>
+        <br/><br/>
+    </div>
+    <div>
+        <table id = "top">
+            <thead>
+                <th>Number</th><th>Squared</th><th>Cubed</th>
+            </thead>
+            <tbody id = "powRows"></tbody>
+        </table>
+    </div>
+</body>
+</html>
