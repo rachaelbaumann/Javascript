@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Temperature Converter</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jQuery-->
+    <link rel="stylesheet" 
+         href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+        crossorigin="anonymous">
+    <link href = "TemperatureConverter.css" type = "text/css" rel = "stylesheet">
+
+    <script>
+        function convertToCelcius() {
+            let tempF = $("#inputF").val();
+            let tempC = (tempF -32) * (5/9);
+            $("#outputC").text(tempC.toFixed(1) + " degrees Celcius");
+        }
+
+        function convertToFahrenheit() {
+            let tempC2 = $("#inputC").val();
+            let tempF2 = (tempC2 * (9/5)) + 32;
+            $("#outputF").text(tempF2.toFixed(1) + " degrees Fahrenheit");
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to the Temeprature Converter!!!!!<br/><br/></h1>
+
+    <h3>Convert Temperature from Fahrenheit to Celcius</h3>
+    <div>
+        <label for = "inputF">Enter a temperature in Fahrenheit:</label>
+        <input type = "text" id = "inputF" name = "inputF">
+    </div>
+    <div>
+        <button type = "submit" onclick = "convertToCelcius()">Convert Temperature to Celcius</button>
+    </div>
+    <p id = "outputC">Temperature in Celcius<br/><br/></p>
+
+    <h3>Convert Temperature from Celcius to Fahrenheit</h3>
+    <div>
+        <label for = "inputC">Enter Temperature in Celcius:</label>
+        <input type = "text" id = "inputC" name = "inputC">
+    </div>
+    <div>
+        <button type = "submit" onclick="convertToFahrenheit()">Convert Temperature to Fahrenheit</button>
+    </div>
+    <p id = "outputF">Temperature in Fahrenheit</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Temperature Converter</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" 
+         href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+        crossorigin="anonymous">
+    <link href = "TemperatureConverter.css" type = "text/css" rel = "stylesheet">
+
+    <script>
+        function convertTemperature() {
+            let tempF = $("#inputF").val();
+
+            let tempC = (tempF - 32) * (5/9);
+
+            $("#outputC").text(
+                tempF.toFixed(1) + " degrees Fahrenheit = "
+              + tempC.toFixed(1) + " degrees Celcius"
+                );
+        }
+    </script>
+</head>
+<body>
+    <h2>Welcome to the temperature converter, friend!</h2>
+    <div>
+        <label for = "inputF">Enter temperature in Fahrenheit:</label>
+        <input type = "text" id = "inputF" name = "inputF">
+     </div>
+     <div>
+         <button type = "submit" onclick = "convertTemperature()">Convert Temperature!</button>
+         <br/><br/>
+     </div>
+     <p id = "outputC">Temperature in Celcius<br/><br/></p>
+     
+</body>
+</html> -->
