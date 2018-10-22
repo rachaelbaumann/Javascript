@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculate Some TIPS!</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jQuery-->
+    <link rel="stylesheet" 
+         href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+        crossorigin="anonymous">
+    <link href = "TipCalculator.css" type = "text/css" rel = "stylesheet">
+
+    <script>
+        function calculateTip() {
+            let meal = $("#mealCost").val();
+            let tip = $("#myRange").val();
+            let tipOutput = $("#tipOutput");
+
+            $("#tipAmount").text("$" + tip);
+            $("#tipOutput").text(tip);
+        }
+       
+    </script>
+</head>
+<body>
+    <h2>Welcome to the Tip Calculator!!!</h2>
+    <div>
+        <label for = "mealCost">Enter the cost of your meal:</label>
+        <input type = "text" id = "mealCost" name = "mealCost">
+    </div>
+    <div>
+        <label>Tip:</label>
+        <input type="range" min="0" max="30" class="slider" id="myRange">
+        <span id = "tipOutput"></span>
+    </div>
+    <div>
+        <button type = "submit" onclick = "calculateTip()">Calculate new totals</button>
+    </div>
+    <p id = "tipAmount">Amount of tip<br/><br/></p>
+</body>
+</html>
